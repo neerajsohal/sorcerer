@@ -1,5 +1,9 @@
 <?php
 
+require "core/Sorcerer.php";
+
+$sorcerer = new Sorcerer();
+
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
 		'name' => 'header-right',

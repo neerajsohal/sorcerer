@@ -50,6 +50,7 @@
 	</div>
 	<hr class="space" />
 	<div class="container footer">
+		<p>copyright &copy; 2010 <a href="http://www.neerajkumar.name/">neeraj kumar a.k.a codemaster snake</a>. all rights reserved.</p>
 		<?php
 			wp_footer();
 		?>
