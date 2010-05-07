@@ -1,0 +1,32 @@
+/*
+Theme Name: Sorcerer
+Theme URI: http://www.neeajkumar.name/
+Description: Sorcerer is a WP theme framework with loads of features
+Author: Neeraj Kumar a.k.a Codemaster Snake
+Author URI: http://www.neerajkumar.name
+Version: 0.1beta
+*/
+
+body {
+	font-family: sans-serif;
+	background-color: #f2f2f2;
+}
+a {
+	
+}
+/* base color scheme */
+
+
+
+
+/* extending blueprint */
+div.container {
+	background-color: #ffffff;
+}
+.error {
+	color: #cc0000;
+	padding:0; margin:0;
+	background: none;
+	border: none;
+}
+/* extending blueprint */
