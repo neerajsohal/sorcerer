@@ -15,7 +15,7 @@
 </head>
 <body <?php body_class(); ?>>
 	<div class="container header">
-		<div class="span-5 logo"><img src="<?php bloginfo('template_url')?>/images/logo" /></div>
+		<div class="span-5 logo"><h1>Sorcerer</h1></div>
 		<div class="span-17 last header_right">
 			<?php
 				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("header-right") ) :
@@ -40,12 +40,16 @@
 		<div class="span-18 last content">
 			<?php
 				if (have_posts()) :
-					while (have_posts()) :
-						the_post();
+					while (have_posts()) : the_post();
+			?>
+			<div class="span-18 last post">
+				<h2 class="title"><?php the_title(); ?></h2>
+			<?php
 						the_content();
 					endwhile;
 				endif;
 			?>
+			</div>
 		</div>
 	</div>
 	<hr class="space" />
