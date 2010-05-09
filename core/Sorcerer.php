@@ -1,8 +1,14 @@
 <?php
 
 class Sorcerer {
+
+	var $ver = '0.1beta';
+	var $root_dir = null;
+	
 	function Sorcerer($params = array()) {
 		$this->register_core_widgets();
+		$this->root_dir = dirname(__FILE__) . '/..';
+
 	}
 
 	function register_sidebars() {
@@ -10,7 +16,7 @@ class Sorcerer {
 	}
 
 	function register_core_widgets() {
-		$dir = dirname(__FILE__) . '/widgets/';
+		$dir = $this->root_dir . '/widgets/';
 		$widgets = scandir($dir);
 
 		foreach ($widgets as $widget) {
@@ -30,6 +36,11 @@ class Sorcerer {
 
 	function load_options() {
 		
+	}
+	
+	function load_template($name = '') {	
+		$dir = $this->root_dir . '/core/templates/';
+		include_once $dir . $name;
 	}
 
 }
