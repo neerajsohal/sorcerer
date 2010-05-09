@@ -39,8 +39,7 @@
 		</div>
 		<div class="span-18 last content">
 			<?php
-				$sorcerer = new Sorcerer();
-				$sorcerer->load_template('test.php');
+				$sorcerer->load_template('test');
 				if (have_posts()) :
 					while (have_posts()) : the_post();
 			?>

@@ -38,9 +38,19 @@ class Sorcerer {
 		
 	}
 	
-	function load_template($name = '') {	
-		$dir = $this->root_dir . '/core/templates/';
-		include_once $dir . $name;
+	function load_template($name = '') {
+		$core_dir = $this->root_dir . '/core/templates/';
+		$child_dir = $this->root_dir . '/templates/';
+		if(is_file($child_dir . $name . '.php')) {
+			include_once $child_dir . $name . '.php';
+		} else {
+			if(is_file($core_dir . $name . '.php')) {
+				include_once $core_dir . $name . '.php';
+			} else {
+				echo '<p class="error">Not Found!</p>';
+			}
+		}
+
 	}
 
 }
